@@ -20,7 +20,8 @@ body {
 }
 
 .container {
-  width: 55rem;
+  width: 100%;
+  max-width: 55rem;
   min-height: 60vh;
   display: flex;
   flex-direction: column;
@@ -50,18 +51,23 @@ body {
   font-weight: 800;
 }
 
-.unit-display {
-  margin: 2rem 0;
+.input-group {
   text-align: center;
+  margin: 2rem 0;
 }
 
-.unit-display span {
-  border: 2px solid #b295ff;
-  font-size: 5.8rem;
+
+.input-group input {
+  width: 100%;
+  max-width: 20rem;
+  font-size: 4rem;
   font-weight: 800;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border: 2px solid #b295ff;
   border-radius: 0.5rem;
-  padding: 1rem 2rem;
-  display: inline-block;
+  background-color: transparent;
+  color: #00ffea;
 }
 
 .convert-btn {
@@ -79,24 +85,57 @@ body {
 }
 
 .convert-btn:hover {
-  background-color: #f3f3f3;
+  background-color: #dbd5ef;
 }
 
 .result-box {
+  width: 100%;
   background: #273549;
   border-radius: 0.5rem;
   padding: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
+  min-height: 9rem;
 }
 
 .result-box h2 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin-bottom: 0.8rem;
   color: #ffffff;
 }
 
 .result-box p {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #dcdcdc;
+}
+
+
+@media (max-width: 500px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  .input-group input {
+    font-size: 3rem;
+    padding: .8rem 1.2rem;
+  }
+
+  .convert-btn {
+    font-size: 1.4rem;
+    padding: .8rem 1.6rem;
+  }
+
+  .result-box {
+    font-size: 1.4rem;
+    padding: 1.6rem;
+  }
+
+  .container {
+    padding: 2rem 1.6rem;
+    gap: 2rem;
+  }
 }
